@@ -1,0 +1,38 @@
+.container.photo__container{
+    width: 80%;
+    padding-bottom: 1rem;
+}
+.photo > img{
+    width: 40%;
+    border-radius: 2rem;
+    margin: auto;
+    border: 0.4rem solid var(--color-primary-variant);
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    visibility: hidden;
+}
+
+
+/* =============== MEDIA QUERIES MD =============== */
+
+@media screen and (max-width: 1024px) {
+    .container.photo__container{
+        width: 100%;
+    }
+    .photo > img{
+        width: 80%;
+        
+    }
+}
+
+/* =============== MEDIA QUERIES SM =============== */
+
+@media screen and (max-width: 600px) {
+    .container.photo__container{
+        width: 100%;
+    }
+    .photo > img{
+        width: 80%;
+        
+    }
+}
