@@ -17,7 +17,7 @@ pipeline{
         stage("Test"){
             steps{
                 script{
-                    env.ENV = input message: "Select the branch for pulling files", ok: "Done", parameters: choice(name: 'Env', [choices: ['Main', 'Test', 'Dev'], description: '')]
+                    env.ENV = input message: "Select the branch for pulling files", ok: "Done", parameters: [choice(name: 'Env', [choices: ['Main', 'Test', 'Dev'], description: '')]
                     gv.scriptTest()
                 }
                 echo "Pulling from ${ENV}"
