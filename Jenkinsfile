@@ -47,14 +47,14 @@ pipeline{
             }
         }
         stage("Pushing DockerHub"){
-            steps{
-                input{
+            input{
                     message "Select the Environment for publishing"
                     ok "Done"
                     parameters{
                         choice(name: 'Environment', choices: ['Main', 'Test', 'Dev'], description: '')
                     }
                 }
+            steps{
                 script{
                     echo "Deploying to ${Environment}"
                     gv.publishscriptTest()
